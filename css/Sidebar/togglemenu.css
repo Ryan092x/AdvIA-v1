@@ -1,0 +1,58 @@
+.botao-menu {
+  background: #292D32;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%; /* Use '50%' para um círculo perfeito */
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+button.icon-menu {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.icon-menu::after,
+.icon-menu::before {
+  content: '';
+  width: 16px;
+  height: 2px;
+  display: block;
+  background: #E3E9EE;
+  transition: transform 0.3s ease;
+}
+
+.icon-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.icon-menu::before {
+  transform-origin: center;
+  transform: rotate(0deg);
+}
+
+.icon-menu::after {
+  transform-origin: center;
+  transform: rotate(0deg);
+}
+
+.icon-menu.ativo::before {
+  transform-origin: center;
+  transform: rotate(-45deg) translate(-1.5px, 3px);
+}
+
+.icon-menu.ativo::after {
+  transform-origin: center;
+  transform: rotate(45deg) translate(-1.5px, -3px); 
+}
