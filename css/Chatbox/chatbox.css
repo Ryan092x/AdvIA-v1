@@ -30,6 +30,7 @@ img.user {
   grid-template-columns: 1fr auto;
   background: #292d32;
   width: auto;
+  max-height: 100vw;
   margin-right: 24px;
   margin-bottom: 24px;
   justify-content: center;
@@ -56,6 +57,7 @@ img.user {
   background: #292d32;
   margin-top: 24px;
   margin-bottom: 24px;
+  overflow-y: auto;
 }
 
 .chat-input {
@@ -98,16 +100,16 @@ img.user {
   flex-shrink: 0;
   background: transparent;
   margin-right: 24px;
-  color: #F1F5F9;
+  color: #f1f5f9;
   padding: 6px;
   border-radius: 10px;
 }
 
 textarea {
-  resize: none; 
+  resize: none;
   height: 1.5em;
   max-height: 128px;
-  color: #7C878E;
+  color: #7c878e;
   border: none;
   outline: none;
   background: transparent;
@@ -147,7 +149,7 @@ textarea {
   height: 24px;
   margin: 20px 20px 20px 28px;
   background: transparent;
-  color: #7C878E;
+  color: #7c878e;
   cursor: pointer;
   transform: rotate(180deg);
 }
@@ -162,9 +164,9 @@ textarea {
   margin: 20px 20px 20px 28px;
   right: 0px;
   background: transparent;
-  color: #7C878E;
+  color: #7c878e;
   cursor: pointer;
-  transition: opacity 0.3s ease; 
+  transition: opacity 0.3s ease;
 }
 
 .toggle-back.ativo {
@@ -190,11 +192,65 @@ textarea {
   outline: none;
 }
 
-@media (max-width: 1400px) {
-.chat-input {
-  width: 934px;
+@media (max-width: 1480px) {
+  .chat-input {
+    width: 640px;
+  }
+  .chat-log {
+    width: 640px;
+  }
 }
-.chat-log {
-  width: 934px;
+
+@media (max-width: 1200px) {
+  .chat-functions {
+    width: 0;
+    .procurar {
+      display: none;
+    }
+  }
+  .chat-functions.ativo {
+    width: 320px;
+    .procurar {
+      display: flex;
+    }
+  }
+  .toggle-back {
+    opacity: 1;
+    visibility: 1;
+    pointer-events: initial;
+  }
+  .toggle-back.ativo {
+    opacity: 0;
+    visibility: 0;
+    pointer-events: none;
+  }
 }
+
+@media (max-width: 800px) {
+  .chat-box {
+    border: none;
+    border-radius: 0px;
+  }
+  .chat-container{
+    position: relative;
+    margin: 0px;
+    height: 100vw;
+  }
+  .chat-menu {
+    margin: 0px;
+    border-radius: 0px;
+  }
+  .chat-log {
+    margin-top: 64px;
+    top: 0;
+    position: absolute;
+    max-height: 600px;
+    width: 100%;
+    border: noe;
+  }
+  .chat-input {
+    background-color: #292d32;
+    position: absolute;
+    bottom: 0;
+  }
 }
