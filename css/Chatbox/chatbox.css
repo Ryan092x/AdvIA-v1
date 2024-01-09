@@ -45,6 +45,7 @@ img.user {
   border-right: 1px solid #393e44;
   align-items: center;
   border-radius: 0px 0px 0px 20px;
+  position: relative;
 }
 
 .chat-log {
@@ -118,24 +119,58 @@ textarea {
 
 .chat-functions {
   height: 100%;
-  width: auto;
+  width: 320px;
   background-color: #292d32;
   border-radius: 0px 0px 20px 0px;
+  transition: all 0.3s ease;
+}
+
+.chat-functions.ativo {
+  width: 0;
+  .procurar {
+    display: none;
+  }
 }
 
 .procurar {
   display: flex;
+  overflow-y: hidden;
+  overflow-x: hidden;
   height: 65px;
   align-items: center;
   background-color: #292d32;
   border-bottom: 1px solid #393e44;
 }
 
-.procurar img {
+.toggle-functions {
   width: 24px;
   height: 24px;
   margin: 20px 20px 20px 28px;
   background: transparent;
+  color: #7C878E;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.toggle-back {
+  position: absolute;
+  opacity: 0;
+  visibility: 0;
+  pointer-events: none;
+  width: 24px;
+  height: 24px;
+  margin: 20px 20px 20px 28px;
+  right: 0px;
+  background: transparent;
+  color: #7C878E;
+  cursor: pointer;
+  transition: opacity 0.3s ease; 
+}
+
+.toggle-back.ativo {
+  opacity: 1;
+  visibility: 1;
+  pointer-events: initial;
 }
 
 .procurar input {
@@ -147,7 +182,19 @@ textarea {
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.14px;
+  min-width: 210px;
+  margin-right: 20px;
 }
+
 .procurar input:focus {
   outline: none;
+}
+
+@media (max-width: 1400px) {
+.chat-input {
+  width: 934px;
+}
+.chat-log {
+  width: 934px;
+}
 }
