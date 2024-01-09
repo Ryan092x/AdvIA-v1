@@ -1,6 +1,6 @@
-header {
+.sidebar.ativo {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: initial;
 }
-
 

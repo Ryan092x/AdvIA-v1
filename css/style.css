@@ -1,6 +1,10 @@
-@import "./global/header.css";
 @import "./global/global.css";
+@import "./global/header.css";
 
 /* Sidebar */
 
-@import "./Sidebar/togglemenu.css"
+@import "./Sidebar/togglemenu.css";
+
+/* Chatbox */
+
+@import "./Chatbox/chatbox.css";

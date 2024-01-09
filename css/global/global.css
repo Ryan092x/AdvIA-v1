@@ -9,6 +9,11 @@ body {
   grid-template-columns: 80px 1fr;
 }
 
+body.ativo {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
 h1,
 h2,
 h3,
@@ -17,4 +22,27 @@ ul,
 p,
 blockquote {
   margin: 0px;
+}
+
+img {
+  max-width: 100%;
+}
+
+input {
+  border: none;
+  padding: initial;
+  margin: initial;
+  font-size: initial;
+  font-family: initial;
+}
+
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  outline: none;
 }

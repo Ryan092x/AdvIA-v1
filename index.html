@@ -6,19 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AdvIA - STEC</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
-  <header>
-    <section class="sidebar">
+  <header class="sidebar">
       <div class="botao-menu">
-        <button class="icon-menu">
-        </button>
-      
-    </section>
+        <button class="icon-menu"></button>
   </header>
 
   <main>
+    <div class="chat-menu">
+      <img src="./img/Advialogo.svg" alt="Advia">
+      <img class="user" src="img/jacarepartidario.webp" alt="Perfil Usuário">
+    </div>
+
+    <div class="chat-container">
+      <div class="chat-box">
+        <div class="chat-log">
+        </div>
+        <div class="chat-input">
+          <img src="img/adviagpt.svg" alt="Advia">
+          <textarea id="user-input" placeholder="Olá, escreva aqui..."></textarea>
+          <img src="img/Button +.svg" alt="Mais Opções">
+          <button>
+            <span class="material-symbols-rounded">
+              send
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="chat-functions">
+        <div class="procurar">
+          <img src="img/Button → SVG.svg" alt="" width="24" height="24">
+          <input type="text" placeholder="Procurar...">
+        </div>
+      </div>
+    </div>
 
   </main>
 
