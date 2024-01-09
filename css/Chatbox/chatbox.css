@@ -230,8 +230,9 @@ textarea {
   .chat-box {
     border: none;
     border-radius: 0px;
+    height: 85vh;
   }
-  .chat-container{
+  .chat-container {
     position: relative;
     margin: 0px;
     height: 100vw;
@@ -241,16 +242,13 @@ textarea {
     border-radius: 0px;
   }
   .chat-log {
-    margin-top: 64px;
     top: 0;
-    position: absolute;
     max-height: 600px;
     width: 100%;
     border: noe;
   }
   .chat-input {
     background-color: #292d32;
-    position: absolute;
     bottom: 0;
   }
 }
