@@ -8,11 +8,23 @@ body {
   display: grid;
   grid-template-columns: 80px 1fr;
   max-width: auto;
+  position: relative;
 }
 
 body.ativo {
   display: grid;
   grid-template-columns: 260px 1fr;
+}
+
+@media (max-width: 1200px) {
+  body.ativo {
+    grid-template-columns: 1fr;
+  }
+  .ativo.coluna-1 {
+    position: absolute;
+    width: 260px;
+    height: 100%;
+  }
 }
 
 @media (max-width: 800px) {
@@ -58,4 +70,16 @@ button {
   cursor: pointer;
   background: none;
   outline: none;
+}
+
+header.sidebar.coluna-1.ativo {
+position: absolute;
+ width: 260px;
+ min-height: 100%;
+ z-index: 2;
+}
+
+main.coluna-2 {
+ width: 100vw;
+ margin-left: 2vw;
 }

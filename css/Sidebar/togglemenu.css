@@ -12,6 +12,7 @@
   cursor: pointer;
   margin-right: 18px;
   margin-left: 18px;
+  z-index: 3;
 }
 
 button.icon-menu {
