@@ -30,7 +30,7 @@ img.user {
   grid-template-columns: 1fr auto;
   background: #292d32;
   width: auto;
-  max-height: 100vw;
+  max-height: 100vh;
   margin-right: 24px;
   margin-bottom: 24px;
   justify-content: center;
@@ -40,7 +40,7 @@ img.user {
 .chat-box {
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 85vh;
   width: auto;
   background-color: #292d32;
   border-right: 1px solid #393e44;
@@ -230,12 +230,11 @@ textarea {
   .chat-box {
     border: none;
     border-radius: 0px;
-    height: 85vh;
   }
   .chat-container {
     position: relative;
     margin: 0px;
-    height: 100vw;
+    height: 85vh;
   }
   .chat-menu {
     margin: 0px;
@@ -249,6 +248,10 @@ textarea {
   }
   .chat-input {
     background-color: #292d32;
+    position: fixed;
     bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
   }
 }
